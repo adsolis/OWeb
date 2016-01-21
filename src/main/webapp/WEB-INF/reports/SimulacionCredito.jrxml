@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Solicitud de Credito" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<parameter name="TP_PRESTAMO" class="java.lang.String"/>
+	<parameter name="NUMERO_FOLIO" class="java.lang.Integer"/>
+	<parameter name="AFEC_PRES" class="java.lang.Integer"/>
+	<parameter name="CAJA" class="java.lang.Integer"/>
+	<parameter name="APATERNO" class="java.lang.String"/>
+	<parameter name="AMARTENO" class="java.lang.String"/>
+	<parameter name="NOMBRE" class="java.lang.String"/>
+	<parameter name="RFC" class="java.lang.String"/>
+	<parameter name="CURP" class="java.lang.String"/>
+	<parameter name="NUM_ISSSTE" class="java.lang.Integer"/>
+	<parameter name="NUM_PRESTAMO" class="java.lang.Double"/>
+	<parameter name="IMPORTE_PRESTAMO" class="java.lang.Double"/>
+	<parameter name="CRAMO" class="java.lang.Integer"/>
+	<parameter name="NRAMO" class="java.lang.String"/>
+	<parameter name="SUELDO_BASICO" class="java.lang.Double"/>
+	<parameter name="NPAGADURIA" class="java.lang.String"/>
+	<parameter name="CPAGADURIA" class="java.lang.String"/>
+	<parameter name="DFOVISSSTE" class="java.lang.Double"/>
+	<parameter name="IMPORTE_PRES_LETRA" class="java.lang.String"/>
+	<parameter name="SALDO_ANTERIOR" class="java.lang.Double"/>
+	<parameter name="PRIMA_GARANTIA" class="java.lang.Double"/>
+	<parameter name="PRIMA_RENOVACION" class="java.lang.Double"/>
+	<parameter name="IMPORTE_CHEQUE_NUM" class="java.lang.Double"/>
+	<parameter name="DESC_AMORTIZACION" class="java.lang.Double"/>
+	<parameter name="TASA_INTERESES" class="java.lang.Double"/>
+	<parameter name="PLAZO" class="java.lang.Integer"/>
+	<parameter name="INICIO_DESC" class="java.lang.Integer"/>
+	<parameter name="FIN_DESC" class="java.lang.Integer"/>
+	<parameter name="FECHA_PRESTAMO" class="java.util.Date"/>
+	<parameter name="IMP_CHEQUE_LETRA" class="java.lang.String"/>
+	<parameter name="CALLE" class="java.lang.String"/>
+	<parameter name="COLONIA" class="java.lang.String"/>
+	<parameter name="CIUDAD" class="java.lang.String"/>
+	<parameter name="NUMERO" class="java.lang.Integer"/>
+	<parameter name="CP" class="java.lang.String"/>
+	<parameter name="ESTADO" class="java.lang.String"/>
+	<parameter name="HEADER_IMAGE_3" class="java.net.URL"/>
+	<parameter name="HEADER_IMAGE_2" class="java.net.URL"/>
+	<parameter name="HEADER_IMAGE_1" class="java.net.URL"/>
+	<parameter name="HEADER_IMAGE_4" class="java.net.URL"/>
+	<parameter name="ANTIGUEDAD_ANIO" class="java.lang.String"/>
+	<parameter name="ANTIGUEDAD_MES" class="java.lang.String"/>
+	<parameter name="ANTIGUEDAD_DIAS" class="java.lang.String"/>
+	<parameter name="DESC_DTO_AMTO" class="java.lang.String"/>
+	<group name="DATOSPRESTAMO">
+		<groupExpression><![CDATA[$V{PAGE_NUMBER}]]></groupExpression>
+		<groupHeader>
+			<band height="664">
+				<rectangle>
+					<reportElement mode="Transparent" x="72" y="212" width="489" height="261"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="88" y="218" width="100" height="10"/>
+					<textElement verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[IMPORTE DEL PRÉSTAMO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="223" y="236" width="120" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[CON  NÚMERO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="347" y="234" width="203" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[CON LETRA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="88" y="253" width="100" height="10"/>
+					<textElement verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[SALDO PRÉSTAMO ANTERIOR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="88" y="269" width="100" height="10"/>
+					<textElement verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[PRIMA DE GARANTÍA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="88" y="284" width="100" height="10"/>
+					<textElement verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[PRIMA DE RENOVACIÓN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="88" y="298" width="100" height="10"/>
+					<textElement verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[IMPORTE DEL CHEQUE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="246" y="310" width="65" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[CON  NÚMERO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="347" y="311" width="203" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[CON LETRA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="88" y="322" width="100" height="10"/>
+					<textElement verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[DESCUENTO DE AMORTIZACIÓN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="86" y="370" width="127" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[TASA DE INTERESES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="223" y="370" width="120" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[PLAZO DE AMORTIZACIÓN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="348" y="370" width="97" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[INICIO DEL DESCUENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="457" y="370" width="97" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[FIN DEL DESCUENTO]]></text>
+				</staticText>
+				<textField pattern="¤ #,##0.00">
+					<reportElement x="223" y="218" width="120" height="10"/>
+					<textElement textAlignment="Center">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{IMPORTE_PRESTAMO}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="347" y="218" width="203" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{IMPORTE_PRES_LETRA}]]></textFieldExpression>
+				</textField>
+				<textField pattern="¤ #,##0.00">
+					<reportElement x="223" y="250" width="120" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{SALDO_ANTERIOR}]]></textFieldExpression>
+				</textField>
+				<textField pattern="¤ #,##0.00">
+					<reportElement x="223" y="266" width="120" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{PRIMA_GARANTIA}]]></textFieldExpression>
+				</textField>
+				<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+					<reportElement x="223" y="281" width="120" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{PRIMA_RENOVACION}]]></textFieldExpression>
+				</textField>
+				<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+					<reportElement x="223" y="295" width="120" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{IMPORTE_CHEQUE_NUM}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="347" y="294" width="203" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{IMP_CHEQUE_LETRA}]]></textFieldExpression>
+				</textField>
+				<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+					<reportElement x="223" y="322" width="120" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{DESC_AMORTIZACION}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="86" y="356" width="127" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{TASA_INTERESES}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="223" y="356" width="118" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Integer"><![CDATA[$P{PLAZO}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="348" y="356" width="97" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Integer"><![CDATA[$P{INICIO_DESC}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="457" y="356" width="97" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Integer"><![CDATA[$P{FIN_DESC}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="223" y="231" width="120" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="348" y="231" width="202" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="223" y="262" width="120" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="223" y="278" width="120" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="224" y="293" width="120" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="224" y="307" width="120" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="224" y="334" width="120" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="348" y="307" width="202" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="94" y="368" width="120" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="223" y="368" width="120" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="348" y="368" width="97" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="457" y="368" width="99" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="71" y="183" width="489" height="24"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="16" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[DATOS DEL PRÉSTAMO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="86" y="392" width="470" height="17"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[“EL ISSSTE, A TRAVÉS DE LA SUBDIRECCIÓN DE OTORGAMIENTO DE CRÉDITO EXPIDE ESTE ACUSE DE REGISTRO A PARTIR DE LA DECLARACIÓN DEL
+TRABAJADOR Ó PENSIONADO DE QUE LOS DATOS SON VERDADEROS”.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="86" y="412" width="470" height="46"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[LOS DATOS PERSONALES RECABADOS SERÁN PROTEGIDOS, INCORPORADOS Y TRATADOS EN EL SISTEMA INTEGRAL DE PRESTACIONES ECONÓMICAS DEL ISSSTE, CON FUNDAMENTO EN LOS ARTICULOS 7 Y 8 DE LA LEY DEL ISSSTE, CUYA FINALIDAD ES EL OTORGAMIENTO DEL PRÉSTAMO PERSONAL, EL CUAL
+FUE REGISTRADO EN EL LISTADO DE SISTEMAS DE DATOS PERSONALES ANTE EL INSTITUTO FEDERAL DE ACCESO A LA INFORMACIÓN PÚBLICA  (WWW.IFAI.ORG.MX) (LO ANTERIOR EN CUMPLIMIENTO DEL DECIMOSÉPTIMO LINEAMIENTO DE PROTECCIÓN DE DATOS PERSONALES, PUBLICADO EN EL
+DIARIO OFICIAL DE LA FEDERACIÓN, EL 30 DE SEPTIEMBRE DE 2005).LOS DATOS SON RESPONSABILIDAD DEL SOLICITANTE Y CUALQUIER ERROR O INCONSISTENCIA EN LOS MISMOS SERÁ MOTIVO DE SUSPENSIÓN DEL TRÁMITE.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="71" y="82" width="172" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="" size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[REGISTRO FEDERAL DE CONTRIBUYENTES (RFC)]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="261" y="33" width="150" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{AMARTENO}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="263" y="119" width="149" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{NRAMO}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="71" y="119" width="174" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Integer"><![CDATA[$P{CRAMO}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="424" y="164" width="137" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement x="424" y="151" width="135" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{DFOVISSSTE}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="425" y="66" width="134" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Integer"><![CDATA[$P{NUM_ISSSTE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="71" y="136" width="174" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[CLAVE DEL RAMO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="263" y="136" width="149" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[NOMBRE DEL RAMO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="71" y="168" width="174" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[CLAVE DE LA PAGADURÍA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="425" y="51" width="134" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="" size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[NOMBRE]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="71" y="65" width="172" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{RFC}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="424" y="132" width="137" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="261" y="50" width="150" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="" size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[APELLIDO MATERNO]]></text>
+				</staticText>
+				<line>
+					<reportElement x="263" y="164" width="150" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="424" y="168" width="135" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[DEDUCCIONES FOVISSSTE]]></text>
+				</staticText>
+				<line>
+					<reportElement x="261" y="46" width="150" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="424" y="136" width="135" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[SUELDO BÁSICO MENSUAL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="263" y="168" width="149" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[NOMBRE DE LA PAGADURÍA]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="71" y="33" width="172" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{APATERNO}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="425" y="83" width="134" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="" size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[NÚMERO ISSSTE]]></text>
+				</staticText>
+				<line>
+					<reportElement x="424" y="47" width="136" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement x="71" y="151" width="174" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{CPAGADURIA}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="71" y="46" width="172" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement x="261" y="65" width="150" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{ANTIGUEDAD_ANIO} + " Años " + $P{ANTIGUEDAD_MES} + " Meses " + $P{ANTIGUEDAD_DIAS} + " dias"]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="71" y="78" width="172" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="71" y="164" width="175" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement x="425" y="34" width="135" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{NOMBRE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="71" y="98" width="488" height="15"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[DATOS LABORALES:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="256" y="83" width="161" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="" size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[ANTIGÜEDAD]]></text>
+				</staticText>
+				<line>
+					<reportElement x="263" y="132" width="150" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement x="263" y="151" width="149" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{NPAGADURIA}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="71" y="50" width="172" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="" size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[APELLIDO PATERNO]]></text>
+				</staticText>
+				<line>
+					<reportElement x="425" y="79" width="136" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="71" y="132" width="174" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="261" y="79" width="150" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<textField pattern="¤ #,##0.00">
+					<reportElement x="423" y="119" width="136" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{SUELDO_BASICO}]]></textFieldExpression>
+				</textField>
+				<image isUsingCache="false">
+					<reportElement x="2" y="6" width="56" height="626"/>
+					<imageExpression class="java.net.URL"><![CDATA[$P{HEADER_IMAGE_1}]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="71" y="4" width="488" height="21"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="16" isBold="false" isUnderline="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[DATOS DEL SOLICITANTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="71" y="501" width="483" height="97"/>
+					<textElement textAlignment="Center">
+						<font size="10" isUnderline="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO
+DIRECCIÓN DE PRESTACIONES ECONÓMICAS, SOCIALES Y CULTURALES
+SUBDIRECCIÓN DE OTORGAMIENTO DE CRÉDITO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="70" y="480" width="482" height="20"/>
+					<textElement textAlignment="Center">
+						<font size="11" isUnderline="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[El presente plan de financiamiento solamente es de carácter informativo]]></text>
+				</staticText>
+				<line>
+					<reportElement x="348" y="334" width="202" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="347" y="338" width="203" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[CON LETRA]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="347" y="321" width="203" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{DESC_DTO_AMTO}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="246" y="335" width="65" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[CON  NÚMERO]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="88" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="90" y="41" width="388" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="11" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["PRÉSTAMO " + $P{TP_PRESTAMO}]]></textFieldExpression>
+			</textField>
+			<image isUsingCache="false">
+				<reportElement x="483" y="9" width="84" height="79"/>
+				<imageExpression class="java.net.URL"><![CDATA[$P{HEADER_IMAGE_2}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="2" y="9" width="84" height="79"/>
+				<imageExpression class="java.net.URL"><![CDATA[$P{HEADER_IMAGE_3}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="90" y="9" width="388" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="11" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[PLAN DE FINANCIAMIENTO POR INTERNET]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>

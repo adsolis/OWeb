@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports 
+http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" 
+              name="Solicitud de Credito" pageWidth="612" pageHeight="792" 
+              columnWidth="572" leftMargin="20" rightMargin="20" 
+              topMargin="20" bottomMargin="20" isTitleNewPage="true" uuid="c068ad76-e492-4691-a89a-7582cb5797a9">
+	<property name="ireport.zoom" value="1.2100000000000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="TP_PRESTAMO" class="java.lang.String"/>
+	<parameter name="NUMERO_FOLIO" class="java.lang.Integer"/>
+	<parameter name="AFEC_PRES" class="java.lang.Integer"/>
+	<parameter name="CAJA" class="java.lang.Integer"/>
+	<parameter name="APATERNO" class="java.lang.String"/>
+	<parameter name="AMARTENO" class="java.lang.String"/>
+	<parameter name="NOMBRE" class="java.lang.String"/>
+	<parameter name="RFC" class="java.lang.String"/>
+	<parameter name="CURP" class="java.lang.String"/>
+	<parameter name="NUM_ISSSTE" class="java.lang.Integer"/>
+	<parameter name="NUM_PRESTAMO" class="java.lang.Double"/>
+	<parameter name="IMPORTE_PRESTAMO" class="java.lang.Double"/>
+	<parameter name="CRAMO" class="java.lang.Integer"/>
+	<parameter name="NRAMO" class="java.lang.String"/>
+	<parameter name="SUELDO_BASICO" class="java.lang.Double"/>
+	<parameter name="NPAGADURIA" class="java.lang.String"/>
+	<parameter name="CPAGADURIA" class="java.lang.String"/>
+	<parameter name="DFOVISSSTE" class="java.lang.Double"/>
+	<parameter name="IMPORTE_PRES_LETRA" class="java.lang.String"/>
+	<parameter name="SALDO_ANTERIOR" class="java.lang.Double"/>
+	<parameter name="PRIMA_GARANTIA" class="java.lang.Double"/>
+	<parameter name="PRIMA_RENOVACION" class="java.lang.Double"/>
+	<parameter name="IMPORTE_CHEQUE_NUM" class="java.lang.Double"/>
+	<parameter name="DESC_AMORTIZACION" class="java.lang.Double"/>
+	<parameter name="TASA_INTERESES" class="java.lang.Double"/>
+	<parameter name="PLAZO" class="java.lang.Integer"/>
+	<parameter name="INICIO_DESC" class="java.lang.Integer"/>
+	<parameter name="FIN_DESC" class="java.lang.Integer"/>
+	<parameter name="FECHA_PRESTAMO" class="java.util.Date"/>
+	<parameter name="IMP_CHEQUE_LETRA" class="java.lang.String"/>
+	<parameter name="CALLE" class="java.lang.String"/>
+	<parameter name="COLONIA" class="java.lang.String"/>
+	<parameter name="CIUDAD" class="java.lang.String"/>
+	<parameter name="NUMERO" class="java.lang.Integer"/>
+	<parameter name="CP" class="java.lang.String"/>
+	<parameter name="ESTADO" class="java.lang.String"/>
+	<parameter name="HEADER_IMAGE_3" class="java.net.URL"/>
+	<parameter name="HEADER_IMAGE_2" class="java.net.URL"/>
+	<parameter name="HEADER_IMAGE_1" class="java.net.URL"/>
+	<parameter name="HEADER_IMAGE_4" class="java.net.URL"/>
+	<group name="DATOSPRESTAMO">
+		<groupExpression><![CDATA[$V{PAGE_NUMBER}]]></groupExpression>
+		<groupHeader>
+			<band height="634">
+				<staticText>
+					<reportElement x="220" y="55" width="132" height="20" uuid="65b44eb1-c23b-4b86-ad74-0c35288fbe38"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Datos del solicitante]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="86" width="73" height="20" uuid="c54613fd-9036-4f4c-9287-b34cc59671ff"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Primer apellido:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="189" y="87" width="90" height="20" uuid="247a9f5d-06d5-4397-a462-bd19ade14030"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Segundo apellido:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="386" y="87" width="47" height="20" uuid="39f7981d-3ecd-4229-8a6f-f580683cd545"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Nombre:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="109" width="189" height="33" uuid="9ae5f022-11b0-40e7-a4af-a4b55bc47f9e"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Registro Federal de Contribuyentes 
+
+(RFC):]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="233" y="112" width="61" height="19" uuid="b6134a04-da68-4346-97ee-729712985617"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Antigüedad:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="388" y="121" width="100" height="20" uuid="2634b436-544e-49ae-8759-2345ad6c2edc"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Número de ISSSTE:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="4" y="188" width="99" height="20" uuid="38288d04-9023-417a-a053-0de303ac3e17"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Clave del ramo:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="137" y="188" width="108" height="20" uuid="8404e615-6a96-45b5-b005-6e99c7927040"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Nombre del ramo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="450" y="180" width="118" height="20" uuid="b90b1ac8-6b60-4d0d-b96a-2beccf43d3e4"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Sueldo básico mensual:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="236" width="54" height="32" uuid="e2cc27fa-e67b-43fb-8d06-c5d038833424"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Clave de la pagaduria:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="140" y="247" width="123" height="20" uuid="f52f0539-bf37-41dd-8bdf-a427ae44fb13"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Nombre de la Pagaduría:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="416" y="229" width="156" height="20" uuid="b066f062-d24d-44bb-a256-74e5b0f8c2b5"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Deducciones de FOVISSSTE:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="236" y="302" width="100" height="20" uuid="5a55a34d-2dad-46b4-be6c-f0960a837784"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Datos del préstamo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="332" width="100" height="20" uuid="39392691-9ea2-492e-8d1a-e04899f0b703"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Importe de préstamo:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="363" width="136" height="20" uuid="87015f55-15d9-4ae5-af2b-7d45f4ff5aff"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Saldo préstamo anterior:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="195" y="363" width="100" height="20" uuid="9e09adb5-10d4-4a3e-96e3-8d4478059d75"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Prima de garantía:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="374" y="363" width="109" height="20" uuid="1db3187a-d7a9-4d66-ba24-3dc4b2039b5c"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Prima de renovación:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="393" width="100" height="20" uuid="c24809de-bc69-400d-8816-b3adf1e294e4"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Importe del cheque:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="81" y="87" width="100" height="20" uuid="5259b313-a39f-4704-9312-d0ea6e797eda"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{APATERNO}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="282" y="87" width="100" height="20" uuid="f2996022-02d6-4d05-bd96-65f6374f0eb2"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{AMARTENO}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="435" y="88" width="118" height="20" uuid="233b413d-2aa4-461b-a4d4-1a4255a6f1d3"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{NOMBRE}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="41" y="121" width="100" height="20" uuid="64ce26d8-6667-4194-9158-494cdbdb6292"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{RFC}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="488" y="121" width="76" height="20" uuid="31f4b7e4-9595-41b7-9c5b-ec7bbdc52b70"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{NUM_ISSSTE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="236" y="151" width="100" height="20" uuid="0b6f228f-28f8-4e27-95a4-ae4b501d2bb9"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Datos laborales]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="85" y="188" width="48" height="20" uuid="3b5996cf-72d1-4ceb-836b-3fc6021ac7a8"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{CRAMO}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="226" y="189" width="212" height="20" uuid="09bb3c37-faab-41f8-be83-157d4ac3495f"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{NRAMO}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="457" y="203" width="100" height="20" uuid="583a512a-ca6e-45bd-a3cd-2e08f40fff6d"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{SUELDO_BASICO}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="59" y="248" width="78" height="20" uuid="d905ceaa-038a-45a9-b431-c31af8faf2fb"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{CPAGADURIA}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="263" y="247" width="173" height="41" uuid="2fc3ecf2-aeba-44db-9b0a-0cb98cdf76b8"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{NPAGADURIA}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="454" y="255" width="100" height="20" uuid="2939984f-50d6-4ff5-9f5c-dfbf21b6af32"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{DFOVISSSTE}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="109" y="331" width="424" height="20" uuid="9f470d3b-1314-4618-adc3-801d73dcd767"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{IMPORTE_PRES_LETRA}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="130" y="362" width="66" height="20" uuid="1fbe250c-a762-4d3e-be66-2c91147fdbf0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{SALDO_ANTERIOR}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="296" y="363" width="72" height="20" uuid="b3b28baa-fad0-4485-90e5-89b94194d5cf"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PRIMA_GARANTIA}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="483" y="363" width="85" height="20" uuid="80b0cfcf-3d59-4146-bdce-f2aa1f9a8325"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PRIMA_RENOVACION}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="112" y="393" width="421" height="20" uuid="4b62f603-5a86-4c50-9b5c-18af4712ecb8"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{IMPORTE_CHEQUE_NUM}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="8" y="426" width="138" height="20" uuid="6ae634cd-53b5-420f-b950-5d5b867368e2"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Descuento de amortización:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="46" y="485" width="100" height="20" uuid="1fcb478e-c273-44e5-b507-ac9c2b591b30"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Tasa de intereses]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="147" y="486" width="136" height="20" uuid="c5c844df-2856-4d46-9e9d-aec3629a6ade"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Plazo de amortización]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="285" y="486" width="123" height="20" uuid="7a01ab23-3ad8-4dcc-8805-906a3ae64cad"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Inicio del descuento]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="411" y="486" width="100" height="20" uuid="399cbb52-1ea6-4c46-b61f-bfaa2fa7b6ed"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[Fin del descuento]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="157" y="427" width="376" height="20" uuid="70d05db2-0abd-48c4-9328-2d1a88520e0b"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{DESC_AMORTIZACION}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="66" y="459" width="57" height="20" uuid="76f4ac92-1526-44b7-a2ee-fadbf47153dd"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{TASA_INTERESES}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="167" y="458" width="100" height="20" uuid="e2461c58-8df3-40af-95c3-12e8667a4477"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PLAZO}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="296" y="459" width="100" height="20" uuid="cf34fac7-fabd-4fa6-bf1d-aa7201c7feeb"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{INICIO_DESC}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="411" y="459" width="100" height="20" uuid="45826d82-058b-4894-bafb-5f2b03aa62da"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Soberana Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{FIN_DESC}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="5" y="519" width="563" height="105" uuid="cc687658-4792-4c8e-afb0-62664e9d9e65"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="none">
+						<font fontName="Soberana Sans"/>
+					</textElement>
+					<text><![CDATA[El ISSSTE, a través de la subdirección de otorgamiento de crédito expide este acuse de registro a partir de la declaración del trabajador o pensionado de que los datos son verdaderos.
+Los datos personalesreacbados serán protegidos, incorporados y tratados en el sistema integral de 
+prestaciones económicas del ISSSTE, con fundamento en los artículos 7 y 8 de la luy del ISSTE, cuya  finalidad es el otorgamiento del préstamo personal, el cual fue registrado en el listado de sistemas de datos
+personales ante el instituto federal de acceso a la información pública (www.ifai.org.mx) (lo anterior en el cumplimiento del decimoséptimo lineamiento de protección de datos personales, publicado en el Diario
+Oficial de la Federación, el 30 de septiemnbre del 2005). Los datos son responsabilidad del solicitante y cualquier error o inconsistencia en los mismos será motivo de suspensión del tramite.
+El presente plan de financiamiento solamente es de carácter informativo.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="105" y="11" width="363" height="32" uuid="5eac4ea6-cff4-4886-9261-c5446d7855dc"/>
+					<textElement textAlignment="Center" markup="none"/>
+					<text><![CDATA[Plan de financiamiento por internet
+préstamo para adquisición de ordinario]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="92" splitType="Stretch">
+			<textField>
+				<reportElement x="468" y="8" width="100" height="20" uuid="8b5850fe-85aa-430a-8b6c-0d0cd40fb9bf"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Soberana Sans" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NUMERO_FOLIO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="367" y="9" width="100" height="20" uuid="1fb865fd-c3b8-4f69-806a-10c1001034c7"/>
+				<text><![CDATA[Folio No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="34" width="335" height="53" uuid="ac89d5d2-478b-476d-801b-3dda54d0754d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Instituto de Seguridad y Servicios Socialesde los Trabajadores del Estado
+Dirección de Prestaciones Económicas, Sociales y Culturales
+Subdirección de Otorgamiento de Crédito]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnFooter>
+		<band height="118" splitType="Stretch">
+			<image>
+				<reportElement x="191" y="30" width="77" height="59" uuid="3eaf27d3-8955-4128-8bc3-2a037ffeffc1"/>
+				<imageExpression><![CDATA["C:\\Users\\Juan\\Documents\\NetBeans\\Codigo_ucol\\RepositorioOtorgamientoWeb\\OtorgamientoWEB\\src\\main\\webapp\\resources\\gobmx_estilos\\logos\\cofemer-bottom.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="6" y="30" width="180" height="50" uuid="7e306c28-639b-4416-97cb-c5d479fcc664"/>
+				<imageExpression><![CDATA["C:\\Users\\Juan\\Documents\\NetBeans\\Codigo_ucol\\RepositorioOtorgamientoWeb\\OtorgamientoWEB\\src\\main\\webapp\\resources\\gobmx_estilos\\logos\\presidencia-bottom.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="274" y="30" width="149" height="50" uuid="5f8ab6df-150a-4272-850e-75d937df9641"/>
+				<imageExpression><![CDATA["C:\\Users\\Juan\\Documents\\NetBeans\\Codigo_ucol\\RepositorioOtorgamientoWeb\\OtorgamientoWEB\\src\\main\\webapp\\resources\\gobmx_estilos\\logos\\issste.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="433" y="10" width="100" height="20" uuid="5870b7b1-9535-4d5d-87d0-d04ebc30dd52"/>
+				<textElement markup="none">
+					<font fontName="Soberana Sans"/>
+				</textElement>
+				<text><![CDATA[Contacto:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="427" y="35" width="141" height="71" uuid="7797424b-ed2f-4d89-901b-a81364048671"/>
+				<textElement markup="none">
+					<font fontName="Soberana Sans" size="6"/>
+				</textElement>
+				<text><![CDATA[Calle Jesús García Num. 140, Col. Buenavista
+C.P. 06350, Cuauhtémoc,
+Mexico D.F
+Tel. (55) 57094116]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>
